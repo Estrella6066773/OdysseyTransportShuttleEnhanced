@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Odyssey Transport Shuttle Pro - 更多穿梭机强化</name>
+  <author>Estrella6066</author>
+  <packageId>Estrella6066.odysseyTransportShuttleEnhanced</packageId>
+  <modVersion>1.0.0</modVersion>
+  <supportedVersions>
+    <li>1.6</li>
+    <li>1.7</li>
+  </supportedVersions>
+  <description>在 Odyssey Transport Shuttle 的基础上增加了更多功能，自带简体中文和英文。
+
+[h3]优化载具 - 太空无人机[/h3]
+太空无人机不需要驾驶员，可以自动在目的地往返。
+你可以派它去提交货物，赠送礼物，或是丢弃垃圾，它会自动完成这些任务并返回。但如果你不希望这么做，就别把不该放的东西放进去。
+[i]（修改了建造材料，如果你安装了生物技术dlc，那么建造它额外需要3个高级核心，因为可复用还能交货的空投仓实在是太爽了）[/i]
+
+[h3]优化载具 - 机械师飞船[/h3]
+机械师飞船可以绑定一名机械师。只有机械师和机械族能驾驶它。
+机械师飞船不能像太空无人机那样自动卸货，因为它主要用于运送机械族。
+每艘机械师飞船可以给机械师增加 8 点机械带宽，最多绑定 3 艘。
+绑定飞船的机械师可以在这艘飞船附近指挥自己的机械族，范围与其自身的可控范围相同。
+
+请放在 Odyssey Transport Shuttle 后面。不要和 Odyssey Transport Shuttle 简体中文同时启用，两边都会写入同一套简体中文。
+
+---
+
+
+This mod adds more features on top of Odyssey Transport Shuttle, and it includes Simplified Chinese and English.
+
+[h3]Enhanced vehicle — Transport drone[/h3]
+A transport drone needs no pilot. It can fly to a destination and return on its own.
+You can send it to hand over cargo, give gifts, or dump waste. It finishes these jobs on its own and returns. If you do not want that to happen, do not put in anything that should not go in.
+[i](The build cost has been changed. If the Biotech DLC is installed, building it also requires 3 high subcores, because a reusable transport pod that can still deliver cargo is simply too good.)[/i]
+
+[h3]Enhanced vehicle — Mechanitor ship[/h3]
+A mechanitor ship can be bound to one mechanitor. Only a mechanitor or a mechanoid can pilot it.
+A mechanitor ship cannot unload cargo on its own the way a transport drone can, because it is mainly used to carry mechanoids.
+Each mechanitor ship gives the mechanitor 8 bandwidth.
+A mechanitor bound to the ship can command their own mechanoids near that ship, within the same range they can already command around themselves.
+
+Load this mod after Odyssey Transport Shuttle. Do not enable it together with Odyssey Transport Shuttle 简体中文. Both mods write the same Simplified Chinese text.
+  </description>
+  <incompatibleWith>
+    <li>Estrella6066.odysseyTransportShuttle.zh</li>
+  </incompatibleWith>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+    <li>
+      <packageId>toshtaru.Odyssey.Transport.Shuttle</packageId>
+      <displayName>Odyssey Transport Shuttle</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3525851843</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>Ludeon.RimWorld.Odyssey</packageId>
+      <displayName>Odyssey</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>toshtaru.Odyssey.Transport.Shuttle</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+  </loadAfter>
+</ModMetaData>

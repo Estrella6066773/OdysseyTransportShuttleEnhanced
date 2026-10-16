@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="TransportDrone"]/description</xpath>
+    <value>
+      <description>A transport drone is built for longer journeys and can reach orbit. Building one requires a shuttle engine. A shuttle engine can only be bought from an orbital trader or obtained from a mission. Compared with a passenger shuttle, a transport drone carries less cargo, waits less time before it can launch again, and uses less chemfuel.
+
+A transport drone needs no pilot and can fly to a destination by itself. When the player chooses a destination, the drone uses the shuttle arrival if that place can be reached by landing, visiting, or trading. If it cannot, the drone hands the cargo to the settlement: a trade request is fulfilled first when the hold meets the whole request, and the remaining cargo is given as a gift. The drone then returns empty. If the settlement cannot receive the cargo either, the drone handles the cargo the way a transport pod would. Cargo that a pod would drop is dropped, and cargo that a pod would destroy is destroyed. After that, the drone still returns empty.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ResearchProjectDef[defName="TransportDrones"]/description</xpath>
+    <value>
+      <description>A transport drone is built for longer journeys and can reach orbit. Building one requires a shuttle engine. A shuttle engine can only be bought from an orbital trader or obtained from a mission. Compared with a passenger shuttle, a transport drone carries less cargo, waits less time before it can launch again, and uses less chemfuel.
+
+A transport drone needs no pilot and can fly to a destination by itself. When the player chooses a destination, the drone uses the shuttle arrival if that place can be reached by landing, visiting, or trading. If it cannot, the drone hands the cargo to the settlement: a trade request is fulfilled first when the hold meets the whole request, and the remaining cargo is given as a gift. The drone then returns empty. If the settlement cannot receive the cargo either, the drone handles the cargo the way a transport pod would. Cargo that a pod would drop is dropped, and cargo that a pod would destroy is destroyed. After that, the drone still returns empty.</description>
+    </value>
+  </Operation>
+</Patch>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <OTS.BindTo>绑定至</OTS.BindTo>
+  <OTS.RebindTo>重新绑定</OTS.RebindTo>
+  <OTS.BindDesc>把这艘机械师飞船绑定给一名机械师。这艘飞船会为机械师提供{0}点机械带宽，并作为基站提供额外的指挥范围，使得机械师可以指挥飞船周围的机械族。如果被解绑，飞船将需要{1}的时间来重置状态，期间无法使用，也无法绑定。</OTS.BindDesc>
+  <OTS.Unbind>解除绑定</OTS.Unbind>
+  <OTS.Unbound>未绑定</OTS.Unbound>
+  <OTS.BoundTo>已绑定：{0}</OTS.BoundTo>
+  <OTS.NoMechanitor>没有可绑定的机械师。</OTS.NoMechanitor>
+  <OTS.Rebinding>这艘飞船正在重新绑定至{0}，还要{1}。</OTS.Rebinding>
+  <OTS.Resetting>绑定已经解除。这艘飞船还要{0}才能重新绑定。</OTS.Resetting>
+  <OTS.RebindWait>这艘飞船还要{0}才能重新绑定。在此之前，这艘飞船不能起飞，也不能绑定。</OTS.RebindWait>
+  <OTS.NeedMechanitorAboard>这艘机械师飞船只能由机械师或机械族驾驶。</OTS.NeedMechanitorAboard>
+  <OTS.DroneReturning>太空无人机已经放下货物，正在返回。</OTS.DroneReturning>
+  <OTS.DroneReturned>太空无人机已经返回。</OTS.DroneReturned>
+  <OTS.DroneLowFuel>化合燃料不够支付返程。虽然太空无人机仍能返回，但无法精确降落。</OTS.DroneLowFuel>
+  <OTS.MechShuttleReturned>机械师飞船已经返回。</OTS.MechShuttleReturned>
+  <OTS.MechShuttleLowFuel>化合燃料不够支付返程。虽然机械师飞船仍能返回，但无法精确降落。</OTS.MechShuttleLowFuel>
+  <OTS.MechShuttleAbortOption>这里无法投送。机械师飞船将带着机械族和货物返回。</OTS.MechShuttleAbortOption>
+  <OTS.MechShuttleReturningWithCargo>投送失败。机械师飞船正带着机械族和货物返回。</OTS.MechShuttleReturningWithCargo>
+  <OTS.MechShuttleReturnedWithCargo>机械师飞船已经带着机械族和货物返回。</OTS.MechShuttleReturnedWithCargo>
+  <OTS.MechShuttleLowFuelCargo>化合燃料不够支付返程。机械师飞船仍会带着机械族和货物返回。</OTS.MechShuttleLowFuelCargo>
+  <OTS.ShuttleScrapped>你赢了，你选择的目的地小众又变态，令你的穿梭机无地自容。
+
+现在你的穿梭机已经解体，其原材料和所有物品都会空投到目的地。</OTS.ShuttleScrapped>
+  <OTS.BindLimit>一名机械师最多绑定{0}艘机械师飞船。</OTS.BindLimit>
+</LanguageData>

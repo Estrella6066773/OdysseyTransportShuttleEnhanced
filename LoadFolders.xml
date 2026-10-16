@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  根目录始终加载：太空无人机的英文说明补丁，以及中英文本。
+  Biotech 目录只在启用生物科技时加载。机械师飞船的 Def 在原模组里也是这样分开的；没装生物科技时那些 Def 不存在。
+-->
+<loadFolders>
+  <v1.7>
+    <li>/</li>
+    <li IfModActive="Ludeon.RimWorld.Biotech">Biotech</li>
+  </v1.7>
+</loadFolders>

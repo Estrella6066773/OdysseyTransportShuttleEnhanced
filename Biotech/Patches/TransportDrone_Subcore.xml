@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    这个目录只在启用生物科技时加载。
+    次生核心（高级）是三级里的最高一级：基础、标准、高级。
+    只加建造消耗，拆掉时不额外掉落核心。
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="TransportDrone"]/costList</xpath>
+    <value>
+      <SubcoreHigh>3</SubcoreHigh>
+    </value>
+  </Operation>
+</Patch>

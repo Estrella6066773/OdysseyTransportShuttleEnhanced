@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <OTS.BindTo>Bind to</OTS.BindTo>
+  <OTS.RebindTo>Rebind to</OTS.RebindTo>
+  <OTS.BindDesc>Bind this mechanitor ship to a mechanitor. This ship gives the mechanitor {0} bandwidth and serves as a base station with extra command range, so the mechanitor can command mechanoids around the ship. If the ship is unbound, it needs {1} to reset. During that time, the ship cannot be used and cannot be bound.</OTS.BindDesc>
+  <OTS.Unbind>Unbind</OTS.Unbind>
+  <OTS.Unbound>Unbound</OTS.Unbound>
+  <OTS.BoundTo>Bound: {0}</OTS.BoundTo>
+  <OTS.NoMechanitor>No mechanitor is available to bind.</OTS.NoMechanitor>
+  <OTS.Rebinding>This ship is rebinding to {0}. {1} remaining.</OTS.Rebinding>
+  <OTS.Resetting>The binding is cleared. This ship can be bound again in {0}.</OTS.Resetting>
+  <OTS.RebindWait>This ship can be bound again in {0}. Until then, it cannot launch and it cannot be bound.</OTS.RebindWait>
+  <OTS.NeedMechanitorAboard>This mechanitor ship needs a mechanitor or a mechanoid aboard before it can launch.</OTS.NeedMechanitorAboard>
+  <OTS.DroneReturning>The transport drone has set down its cargo and is returning.</OTS.DroneReturning>
+  <OTS.DroneReturned>The transport drone has returned.</OTS.DroneReturned>
+  <OTS.DroneLowFuel>There is not enough chemfuel for the return trip. The transport drone is still returning.</OTS.DroneLowFuel>
+  <OTS.MechShuttleReturned>The mechanitor ship has returned.</OTS.MechShuttleReturned>
+  <OTS.MechShuttleLowFuel>There is not enough chemfuel for the return trip. The mechanitor ship is still returning.</OTS.MechShuttleLowFuel>
+  <OTS.MechShuttleAbortOption>This destination cannot take a delivery. The mechanitor ship will return with the mechanoids and the cargo.</OTS.MechShuttleAbortOption>
+  <OTS.MechShuttleReturningWithCargo>The delivery failed. The mechanitor ship is returning with the mechanoids and the cargo.</OTS.MechShuttleReturningWithCargo>
+  <OTS.MechShuttleReturnedWithCargo>The mechanitor ship has returned with the mechanoids and the cargo.</OTS.MechShuttleReturnedWithCargo>
+  <OTS.MechShuttleLowFuelCargo>There is not enough chemfuel for the return trip. The mechanitor ship is still returning with the mechanoids and the cargo.</OTS.MechShuttleLowFuelCargo>
+  <OTS.ShuttleScrapped>You win. The destination you picked is so peculiar and outrageous that your shuttle is too ashamed to land.
+
+Your shuttle has now broken apart. Its raw materials and everything it carried will be airdropped at the destination.</OTS.ShuttleScrapped>
+  <OTS.BindLimit>A mechanitor can bind at most {0} mechanitor ships.</OTS.BindLimit>
+</LanguageData>

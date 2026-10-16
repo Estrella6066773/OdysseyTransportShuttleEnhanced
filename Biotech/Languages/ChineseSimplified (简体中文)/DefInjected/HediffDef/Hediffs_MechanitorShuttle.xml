@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <OTS_MechanitorShuttleBandwidth.label>机械师飞船</OTS_MechanitorShuttleBandwidth.label>
+  <OTS_MechanitorShuttleBandwidth.description>这名机械师绑定了机械师飞船。每艘处于绑定中的机械师飞船为这名机械师提供 8 点机械带宽。在飞船所在的同一张地图上，这名机械师可以在飞船附近指挥自己的机械族，指挥范围与这名机械师自身的可控范围相同。</OTS_MechanitorShuttleBandwidth.description>
+
+</LanguageData>

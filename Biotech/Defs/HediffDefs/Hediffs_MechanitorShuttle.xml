@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>OTS_MechanitorShuttleBandwidth</defName>
+    <hediffClass>OdysseyTransportShuttleEnhanced.Hediff_MechanitorShuttleLink</hediffClass>
+    <label>mechanitor ship</label>
+      <description>This mechanitor is bound to mechanitor ships. Each bound mechanitor ship gives this mechanitor 8 bandwidth. On the same map as a bound ship, this mechanitor can command their own mechanoids near that ship. The command radius matches the radius this mechanitor already has around themselves.</description>
+    <isBad>false</isBad>
+  </HediffDef>
+</Defs>

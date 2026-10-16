@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MechanitorShuttle"]/description</xpath>
+    <value>
+      <description>This is a chemfuel-powered mechanitor ship, built for a mechanitor's work. It has stronger mechanoid control and carries more cargo, and it uses more chemfuel. A mechanitor or a mechanoid can pilot it. When a mechanitor is aboard and the player chooses a destination, the ship tries a shuttle landing, visit, or trade first. If the destination cannot be reached that way, the ship hands the cargo to the settlement and then returns empty. If the settlement cannot receive the cargo either, the ship handles the cargo the way a transport pod would, and the ship itself stays with the cargo. When no mechanitor is aboard and only mechanoids are aboard, the ship cannot hand cargo to anyone. If the destination can be reached by shuttle landing, visiting, or trading, the ship goes there as a shuttle. If none of those apply, the delivery fails, and the ship returns to its origin with the mechanoids and the cargo.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MechanitorShuttle"]/comps</xpath>
+    <value>
+      <li Class="OdysseyTransportShuttleEnhanced.CompProperties_MechanitorShuttleLink" />
+    </value>
+  </Operation>
+
+  <!--
+    原定义没有 tickerType，建筑默认是 Never，游戏不会调用 CompTick。
+    重新绑定的一天靠 CompTick 走到点；不改成 Normal，截止时刻到了也不会生效。
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MechanitorShuttle"]</xpath>
+    <value>
+      <tickerType>Normal</tickerType>
+    </value>
+  </Operation>
+</Patch>

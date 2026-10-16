@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <MechanitorShuttle.label>机械师飞船</MechanitorShuttle.label>
+  <MechanitorShuttle.description>这是一艘以化合燃料驱动的机械师飞船，为机械师的工作而设计。它拥有更强的机械族控制系统，载货量也更大，但化合燃料消耗更高。机械师和机械族都可以驾驶它。船上有机械师时，玩家为它指定目的地，游戏先按穿梭机处理。目的地不能按穿梭机降落、访问或交易时，这艘飞船把货物交给定居点，然后空载返回。定居点也不能接收这些货物时，这艘飞船按运输舱处理货物，飞船本身留在货物里。船上没有机械师、只有机械族时，这艘飞船不能把货物交给别人。目的地可以按穿梭机降落、访问或交易时，它按穿梭机前往。这些都不成立时，投送失败，这艘飞船带着机械族和货物返回出发地。</MechanitorShuttle.description>
+  <MechanitorShuttle.comps.CompLaunchable.cooldownEndedMessage>{0}已准备好再次发射。</MechanitorShuttle.comps.CompLaunchable.cooldownEndedMessage>
+  <MechanitorShuttle.comps.CompRefuelable.fuelLabel>化合燃料</MechanitorShuttle.comps.CompRefuelable.fuelLabel>
+  <MechanitorShuttle.comps.CompRefuelable.fuelGizmoLabel>化合燃料</MechanitorShuttle.comps.CompRefuelable.fuelGizmoLabel>
+
+</LanguageData>
