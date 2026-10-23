@@ -1,12 +1,22 @@
 # 编译中间产物
 Source/bin/
 Source/obj/
+Source/Net472/bin/
+Source/Net472/obj/
 
 # 调试符号文件（Assemblies 下的 dll 保留在版本控制内，克隆后即可作为 mod 使用）
 Assemblies/*.pdb
+1.6/Assemblies/*.pdb
+1.7/Assemblies/*.pdb
+
+# OneDrive 占位符残留（本地被同步引擎锁住，删不掉时先忽略）
+1.7/Assemblies/stale-delete-me.txt
 
 # IDE 与用户本地配置
 .vs/
 .idea/
 *.user
 *.suo
+# 构建副产物与本地备份（不纳入版本控制）
+*.deps.json
+*.bak_*

@@ -2,10 +2,20 @@
 <!--
   根目录始终加载：太空无人机的英文说明补丁，以及中英文本。
   Biotech 目录只在启用生物科技时加载。机械师飞船的 Def 在原模组里也是这样分开的；没装生物科技时那些 Def 不存在。
+
+  1.6 和 1.7 的 Assemblies 分开编译，各自放在版本目录里：1.6 用 net472 和 1.6 的引用程序集，
+  1.7 用 net10.0 和 1.7 的引用程序集。1.7 编译出的 DLL 引用了 .NET 10 的 System.Runtime 与 UnityStubs，
+  1.6 的 Mono 运行时解析不了，会在 CreateModClasses 里抛 TypeLoadException。所以两个版本不能共用同一个程序集。
 -->
 <loadFolders>
+  <v1.6>
+    <li>/</li>
+    <li>1.6</li>
+    <li IfModActive="Ludeon.RimWorld.Biotech">Biotech</li>
+  </v1.6>
   <v1.7>
     <li>/</li>
+    <li>1.7</li>
     <li IfModActive="Ludeon.RimWorld.Biotech">Biotech</li>
   </v1.7>
 </loadFolders>

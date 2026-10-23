@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    RimWorld 1.6 用的构建。1.7 的构建在 OdysseyTransportShuttleEnhanced.csproj。
+
+    1.6 是 Unity Mono + .NET Framework 4.7.2 运行时，不认 1.7 那套 .NET 10 的 System.Runtime
+    和 UnityStubs 引用。1.7 编译出的 DLL 在 1.6 上会在 CreateModClasses 里抛 TypeLoadException，
+    这就是 GitHub issue 里那份日志。源码本身两边通用，只是引用程序和目标框架不同。
+
+    引用来自 NuGet 缓存里的 Krafs.Rimworld.Ref 1.6.4871；本机没有 1.6 游戏目录也能编译。
+    改引用的游戏版本时，同步改 KrafsVersion。
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>OdysseyTransportShuttleEnhanced</AssemblyName>
+    <RootNamespace>OdysseyTransportShuttleEnhanced</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
+    <DebugType>portable</DebugType>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <Version>1.0.0</Version>
+    <KrafsVersion>1.6.4871</KrafsVersion>
+    <KrafsPath>$(USERPROFILE)\.nuget\packages\krafs.rimworld.ref\$(KrafsVersion)</KrafsPath>
+    <HarmonyPath>E:\SteamLibrary\steamapps\workshop\content\294100\2009463077\1.6\Assemblies</HarmonyPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(KrafsPath)\ref\net472\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(KrafsPath)\ref\net472\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(KrafsPath)\ref\net472\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(KrafsPath)\ref\net472\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyPath)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

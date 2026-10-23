@@ -10,12 +10,15 @@ namespace OdysseyTransportShuttleEnhanced
     /// <summary>
     /// 把选中的抵达动作原样执行，再让被摘出的载具空载返回。
     ///
-    /// 联动关系：Patch_DroneTryLaunch 只在不是穿梭机流程时套上本类。太空无人机的交易交接和空投舱都用它；
-    /// 机械师飞船只在交易交接时用它，并写入 MechanitorShuttle 和对应提示。穿梭机降落、访问、交易不经过这里。
+    /// 联动关系：Patch_DroneTryLaunch 只在动作会把货舱当货物处理时套上本类，判定写在 ShuttleArrivalCascade.IsCargoDisposal。
+    /// 太空无人机的赠送、交给远行队、空投和袭击定居点都用它；机械师飞船只在交易交接时用它，
+    /// 并写入 MechanitorShuttle 和对应提示。落地型动作一律不经过这里。
     /// 抵达时先按 shuttleDefName 把载具取出，避免被赠送或销毁，再执行玩家选中的动作。
     /// 动作为空时补运输舱兜底。最后 DroneReturnFlight 只带走载具。
     ///
     /// 注意：StillValid 必须一直为真。一旦返回假，TravellingTransporters 会丢掉本动作，载具就会留在货舱里被一起销毁。
+    /// Arrived 里还要再挡一次落地型动作：旧存档里可能已经存着被包装过的落地动作，
+    /// 这时直接转交执行、不摘载具也不安排返航，否则它们会找不到载具，把飞机当货物丢进空投舱。
     /// 赠送前如果定居点有足够的交易请求货物，先按交易请求提交，剩下的仍全部赠送。
     /// 旧存档没有 shuttleDefName，按太空无人机读。
     /// </summary>
@@ -72,6 +75,14 @@ namespace OdysseyTransportShuttleEnhanced
 
         public override void Arrived(List<ActiveTransporterInfo> transporters, PlanetTile tile)
         {
+            if (inner != null && !ShuttleArrivalCascade.IsCargoDisposal(inner, crewAboard: false))
+            {
+                // 落地型抵达（原版访问、结队，或别的模组注册的声明式落地）要自己从货舱取载具再降落。
+                // 这里先不摘飞机、也不安排返航，否则它们找不到载具，会把飞机当普通货物丢进空投舱。
+                inner.Arrived(transporters, tile);
+                return;
+            }
+
             WorldObjectDef flightDef = DroneReturnFlight.FlightDefOf(transporters);
             List<Thing> drones = DroneReturnFlight.ExtractShuttles(transporters, shuttleDefName);
             if (inner is TransportersArrivalAction_GiveGift)
